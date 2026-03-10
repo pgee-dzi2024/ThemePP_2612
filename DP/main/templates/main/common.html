@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en"
+      dir="ltr"
+      data-nav-layout="vertical"
+      data-vertical-style="overlay"
+      data-theme-mode="dark"
+      data-header-styles="light"
+      data-menu-styles="light"
+      data-toggled="close">
+
+<head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> КРИПТО </title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/brand-logos/favicon.ico.png' %}" type="image/x-icon">
+
+    <!-- Main Theme Js -->
+    <script src="{% static 'js/authentication-main.js' %}"></script>
+
+    <!-- Bootstrap Css -->
+    <link id="style" href="{% static 'libs/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+
+    <!-- Icons Css -->
+    <link href="{% static 'css/icons.min.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="page error-bg" id="particles-js">
+        <!-- Start::error-page -->
+        <div class="error-page">
+            <div class="container">
+                <div class=" p-5 my-auto d-flex justify-content-center">
+                    {% block content %}
+
+
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Show Password JS -->
+    <script src="{% static 'js/show-password.js' %}"></script>
+
+        <!-- Particles JS -->
+    <script src="{% static 'libs/particles.js/particles.js' %}"></script>
+        <!-- Error JS -->
+    <script src="{% static 'js/error.js' %}"></script>
+
+</body>
+
+</html>
