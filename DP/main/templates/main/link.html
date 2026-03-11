@@ -1,0 +1,28 @@
+{% extends 'main/common.html' %}
+{% load static %}
+
+{% block content %}
+                    <div class="col-10">
+                        <div class="mt-5 d-flex justify-content-center">
+                            <a href="{% url 'logout' %}">
+                                <img src="{% static 'images/brand-logos/crypto.png' %}" alt="logo" class="desktop-logo">
+                            </a>
+                        </div>
+                        <div class="card-1 custom-card">
+                            <div class="card-body p-5">
+                                <div class="block-password">
+                                    <p class="h5 fw-semibold mb-2 text-center">Вашият линк за еднократно прочитане е:</p>
+                                    <p  class="h5 fw-semibold mb-2 text-center">{{ secret_link }}</p>
+                                </div>
+                                <form method="post" action="{% url 'logout' %}">
+                                    {% csrf_token %}
+                                    <div class="row gy-3">
+                                        <div class="col-xl-12 d-grid mt-5">
+                                            <button type="submit" class="btn-1 white text-center"> Затвори </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+{% endblock %}
